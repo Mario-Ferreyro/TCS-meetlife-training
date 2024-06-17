@@ -1,0 +1,79 @@
+Activity 2
+package hotdoggo;
+
+public class Doggo {
+public static void main(String[] args) {
+	String part1 = "hot";
+	String part2 = "dog";
+	
+	System.out.println(part1 + part2);
+	System.out.println(part1 + part2+ " " + "here to buy");
+}
+}
+
+
+package Greatestnumber;
+
+import java.util.Scanner;
+
+public class Great {
+	public static void main (String[] args) {
+		System.out.println("please input a number 1");
+		Scanner scanner = new  Scanner(System.in);
+		int Num1 = scanner.nextInt();
+		
+		System.out.println("please input a number 2");
+		Scanner scanner1 = new  Scanner(System.in);
+		int Num2 = scanner1.nextInt();
+		
+		
+		System.out.println("please input a number 3");
+		Scanner scanner2 = new  Scanner(System.in);
+		int Num3 = scanner2.nextInt();
+		System.out.println(getNumber( Num1,  Num2,  Num3)+" " +"is the greatest number");
+	}
+
+		
+
+		static int getNumber (int Num1, int Num2, int Num3) {
+			int num4; 
+			
+			
+			if (Num1>Num2 && Num1>Num3)
+			{
+				num4=Num1;
+			}
+			else if  (Num2>Num1 && Num2>Num3)
+			{
+				num4=Num2;
+			}
+			else 
+			{
+				num4=Num3;	
+			}
+			return num4;
+			
+		}
+}
+
+package fibonacci;
+
+import java.util.Scanner;
+
+public class Fibo {
+public static void main (String[]args) {
+	int num1 =0, num2 = 1, num3 =0;
+	
+	System.out.println("please input a number to give the succesion");
+	Scanner scanner = new  Scanner(System.in);
+	int count = scanner.nextInt();
+	
+	for (int V=0; V < count; V++) {
+		num3= num1 + num2;
+		System.out.print(num3+",");
+		num1=num2;
+		num2=num3;
+	}
+	
+}
+}
