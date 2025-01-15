@@ -1,0 +1,18 @@
+import os
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
+import time
+
+# Ruta completa de geckodriver
+geckodriver_path = "F:\autotest1geckodriver.exe"  # Ajusta esta ruta si es necesario
+
+if not os.path.exists(geckodriver_path):
+    raise FileNotFoundError(f"El archivo geckodriver.exe no se encuentra en la ruta: {geckodriver_path}")
+else:
+    print(f"Archivo encontrado: {geckodriver_path}")
+
+service = Service(executable_path=geckodriver_path)
+driver = webdriver.Firefox(service=service)
+
+driver.get("https://project-drasil.online/login")
+time.sleep(20)
